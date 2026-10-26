@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    body { font-family: Inter, Arial, sans-serif; color: #3d3737; background: #ffffff; }
+    .tagline { color: #4e4e4e; }
+    a:focus-visible { outline: 3px solid #0b319a; outline-offset: 3px; }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      z-index: 100;
+      background: #ffffff;
+      padding: 8px 16px;
+    }
+    .skip-link:focus { top: 0; }
+  </style>
+</head>
+<body>
+      <!-- Header -->
+    <header>
+      <img src="images/logo.png" alt="Maplebrook Public Library Logo" width="100" height="100">
+
+       <!-- Main Navigation -->
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="Registering.html">Registering</a>
+      <a href="News.html">News</a>
+      <a href="Researches.html">Research</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Events.html">Events</a>
+    </nav>
+    <hr>
+    </header>
+
+    <!-- Form Section -->
+    <section>
+      <h2>Register for a Library Card</h2>
+      
+      <form action="submit_registration.php" method="POST">
+        <label for="Firstname">First Name:</label>
+        <input type="text" id="Firstname" name="Firstname" required>
+        <label for="Lastname">Last Name:</label>
+        <input type="text" id="Lastname" name="Lastname" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <fieldset>
+          <legend>preferred contact method</legend>
+            <label for="email-contact">Email</label>
+            <input type="radio" id="email-contact" name="contact-method" value="email" required>
+            <label for="phone-contact">Phone</label>
+            <input type="radio" id="phone-contact" name="contact-method" value="phone" required>
+        </fieldset>
+        <label for="textarea">message:</label>
+        <textarea id="textarea" name="message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <hr>
+<!-- Data table -->
+ <h2>Library Opening Hours</h2>
+      <table>
+        <caption>Library Opening Hours</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Opening Hours</th>
+            <th scope="col">Closing Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td scope="row">Monday</td>
+              <td>9:00 AM</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td scope="row">Tuesday</td>
+              <td>9:00 AM</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td scope="row">Wednesday</td>
+              <td>9:00 AM</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>9:00 AM</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td scope="row">Friday</td>
+              <td>9:00 AM</td>
+              <td>5:00 PM</td>
+            </tr>
+            <tr>
+              <td scope="row">Saturday</td>
+              <td>10:00 AM</td>
+              <td>4:00 PM</td>
+            </tr>
+            <tr>
+              <td scope="row">Sunday</td>
+              <td colspan="2">Closed</td>
+            </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td scolspan="3">holidays and special events are closed</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+</body>
+</html>
